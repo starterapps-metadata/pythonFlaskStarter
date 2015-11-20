@@ -1,0 +1,24 @@
+{
+	"name" : "Python Flask",
+	"services" : [],
+	"type" : "web",
+	"description" : "A simple Python Flask application that will get you up and running quickly.",
+	"smallIcon" : "runtime-py-f_24.png",
+	"icon" : "runtime-py-f_32.png",
+	"largeIcon" : "runtime-py-f_50.png",
+	"featuredIcon" : "runtime-py-f_64.png",
+	"buildpack" : "python_buildpack",
+	"system_tags" : ["ibm_community"],
+	"categories" : ["boilerplates"],
+	"metadata" : {
+		"termsUrl" : "https://www.ibm.com/software/sla/sladb.nsf/sla/bm-6626-01"
+	},
+	"source" : {
+		"scmType" : "git",
+		"url" : "https://github.com/starterapps-metadata/pythonFlaskStarter.git",
+		"appPath" : "app"
+	},
+	"docURL": "/#starters/python/index.html",
+    "runtime_template_id": "pythonHelloWorld"
+
+}
