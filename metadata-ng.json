@@ -18,7 +18,6 @@
 		"url" : "https://github.com/starterapps-metadata/pythonFlaskStarter.git",
 		"appPath" : "app"
 	},
-	"docURL": "/#starters/python/index.html",
-    "runtime_template_id": "pythonHelloWorld"
-
+	"docURL": "/#runtimes/python/index.html",
+	"runtime_template_id": "pythonHelloWorld"
 }
