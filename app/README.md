@@ -13,7 +13,8 @@ Alternatively follow the steps below to get the sample code and see how to deplo
 ##Get this sample
 From a terminal navigate to a location where you want this application code to be downloaded to and issue:
 ```bash
-git clone https://github.com/IBM-Bluemix/bluemix-python-flask-sample
+git clone https://github.com/starterapps-metadata/pythonFlaskStarter.git
+cd pythonFlaskStarter/app
 ```
 or download the zip file containing this sample code.
 
@@ -26,7 +27,7 @@ or for the UK region:
 ```script
 cf login -a api.eu-gb.bluemix.net
 ```
-The login will ask you for you `email`(username) and `password`, plus the `organisation` and `space` if there is more than one to choose from.
+The login will ask you for you `email`(username) and `password`, plus the `organization` and `space` if there is more than one to choose from.
 
 From the root directory of the application code execute the following to deploy the application to Bluemix. (By default the `route` (application URL) will be based on your application name so make sure your application name is unique or use the -n option on the cf push command to define your hostname)
 ```script
@@ -49,13 +50,13 @@ Once the application is deployed and started open a web browser and point to the
 
 **requirements.txt** - Contains the external python packages that are required by the application. These will be downloaded from the [python package index](https://pypi.python.org/pypi/) and installed via the python package installer (pip) during the buildpack's compile stage when you execute the cf push command. In this sample case we wish to download the [Flask package](https://pypi.python.org/pypi/Flask) at version 0.10.1
 
-**runtime.txt** - Controls which python runtime to use. In this case we want to use 2.7.9. 
+**runtime.txt** - Controls which python runtime to use. In this case we want to use 2.7.10. 
 
 **README.md** - this readme.
 
-**welcome.py** - the python application script. This is implemented as a simple [Flask](http://flask.pocoo.org/) application. The routes are defined in the application using @app.route() calls. This application has a / route defined. The application deployed to Bluemix needs to listen to the port defined by the VCAP_APP_PORT environment variable as seen here:
+**welcome.py** - the python application script. This is implemented as a simple [Flask](http://flask.pocoo.org/) application. The routes are defined in the application using @app.route() calls. This application has a / route defined. The application deployed to Bluemix needs to listen to the port defined by the PORT environment variable as seen here:
 ```python
-port = os.getenv('VCAP_APP_PORT', '5000')
+port = os.getenv('PORT', '5000')
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=int(port))
 ```
