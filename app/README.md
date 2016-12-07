@@ -42,7 +42,7 @@ cf push <YOUR_APP_NAME> -m 128M -n <YOUR_HOST_NAME>
 ```
 
 ##View App
-Once the application is deployed and started open a web browser and point to the application route defined at the end of the `cf push` command i.e. http://bluemix-python-flask-sample.eu-gb.mybluemix.net/. This will execute the code under the `/` app route defined in the `welcome.py` file. Navigate to http://bluemix-python-flask-sample.eu-gb.mybluemix.net/myapp to see the other `/myapp` route.
+Once the application is deployed and started open a web browser and point to the application route defined at the end of the `cf push` command i.e. http://bluemix-python-flask-sample.eu-gb.mybluemix.net/. This will execute the code under the `/` app route defined in the `welcome.py` file.
 
 ##Structure of application
 **Procfile** - Contains the command to run when you application starts on Bluemix. It is represented in the form `web: <command>` where `<command>` in this sample case is to run the `py` command and passing in the the `welcome.py` script.
@@ -53,7 +53,7 @@ Once the application is deployed and started open a web browser and point to the
 
 **README.md** - this readme.
 
-**welcome.py** - the python application script. This is implemented as a simple [Flask](http://flask.pocoo.org/) application. The routes are defined in the application using the @app.route() calls. This application has a / route and a /myapp route defined. The application deployed to Bluemix needs to listen to the port defined by the VCAP_APP_PORT environment variable as seen here:
+**welcome.py** - the python application script. This is implemented as a simple [Flask](http://flask.pocoo.org/) application. The routes are defined in the application using @app.route() calls. This application has a / route defined. The application deployed to Bluemix needs to listen to the port defined by the VCAP_APP_PORT environment variable as seen here:
 ```python
 port = os.getenv('VCAP_APP_PORT', '5000')
 if __name__ == "__main__":
