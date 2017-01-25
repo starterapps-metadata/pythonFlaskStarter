@@ -2,8 +2,6 @@
 
 This application demonstrates a simple, reusable Python web application based on the [Flask microframework](http://flask.pocoo.org/).
 
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/starterapps-metadata/pythonFlaskStarter)
-
 ## Run the app locally
 
 1. [Install Python][]
