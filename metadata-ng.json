@@ -8,6 +8,7 @@
 	"largeIcon" : "runtime-py-f_50.png",
 	"featuredIcon" : "runtime-py-f_64.png",
 	"buildpack" : "python_buildpack",
+	"version" : "1.0",
 	"system_tags" : ["ibm_community"],
 	"categories" : ["boilerplates"],
 	"defaultMemory": 128,
